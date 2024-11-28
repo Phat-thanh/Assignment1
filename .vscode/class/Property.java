@@ -36,6 +36,6 @@ public class Property {
 
     @Override
     public String toString() {
-        return "Property [ID=" + propertyId + ", Address=" + address + ", Price=" + price + ", Status=" + status + "]";
+        return "Property [ID=" + propertyId + ", Address=" + address + ", Price=" + price + ", Status=" + status + "";
     }
 }

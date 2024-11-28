@@ -21,6 +21,6 @@ public class CommercialProperty extends Property {
 
     @Override
     public String toString() {
-        return super.toString() + ", Business Type=" + businessType + ", Parking Spaces=" + parkingSpaces;
+        return super.toString() + ", Business Type=" + businessType + ", Parking Spaces=" + parkingSpaces+"]";
     }
 }

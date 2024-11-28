@@ -288,13 +288,28 @@ private void loadTenants() {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                properties.add(new Property(parts[0], parts[1], Double.parseDouble(parts[2]), parts[3]));
+                String propertyId = parts[0];
+                String address = parts[1];
+                double price = Double.parseDouble(parts[2]);
+                String status = parts[3];
+                String type = parts[4];
+                String[] additionalInfo = parts[5].split(":");
+    
+                if (type.equalsIgnoreCase("Residential")) {
+                    int bedrooms = Integer.parseInt(additionalInfo[0]);
+                    boolean allowsPets = Boolean.parseBoolean(additionalInfo[1]);
+                    properties.add(new ResidentialProperty(propertyId, address, price, status, bedrooms, allowsPets));
+                } else if (type.equalsIgnoreCase("Commercial")) {
+                    String businessType = additionalInfo[0];
+                    int parkingSpaces = Integer.parseInt(additionalInfo[1]);
+                    properties.add(new CommercialProperty(propertyId, address, price, status, businessType, parkingSpaces));
+                }
             }
         } catch (IOException e) {
             System.out.println("Error loading properties: " + e.getMessage());
         }
     }
-
+    
     private void saveProperties() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(PROPERTIES_FILE))) {
             for (Property property : properties) {

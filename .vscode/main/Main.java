@@ -22,8 +22,10 @@ public class Main {
             System.out.println("5. View Tenants");
             System.out.println("6. View Hosts");
             System.out.println("7. View Owners");
-            System.out.println("8. View Properties");
-            System.out.println("9. Exit");
+            System.out.println("8. View All Properties");
+            System.out.println("9. View Residential Properties");
+            System.out.println("10. View Commercial Properties");
+            System.out.println("11. Exit");
             System.out.print("Enter your choice: ");
 
             String choice = scanner.nextLine();
@@ -50,9 +52,15 @@ public class Main {
                     viewOwners();
                     break;
                 case "8":
-                    viewProperties();
+                    viewAllProperties();
                     break;
                 case "9":
+                    viewResidentialProperties();
+                    break;
+                case "10":
+                    viewCommercialProperties();
+                    break;
+                case "11":
                     exit = true;
                     rentalManager.saveDataToFile();
                     System.out.println("Exiting the program. Goodbye!");
@@ -154,12 +162,42 @@ public class Main {
     }
 
     // Function to view all properties
-    private static void viewProperties() {
+    private static void viewAllProperties() {
         List<Property> properties = rentalManager.getAllProperties();
         if (properties.isEmpty()) {
             System.out.println("No properties available.");
         } else {
             properties.forEach(System.out::println);
+        }
+    }
+
+    // Function to view residential properties
+    private static void viewResidentialProperties() {
+        List<Property> properties = rentalManager.getAllProperties();
+        boolean found = false;
+        for (Property property : properties) {
+            if (property instanceof ResidentialProperty) {
+                System.out.println(property);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No residential properties available.");
+        }
+    }
+
+    // Function to view commercial properties
+    private static void viewCommercialProperties() {
+        List<Property> properties = rentalManager.getAllProperties();
+        boolean found = false;
+        for (Property property : properties) {
+            if (property instanceof CommercialProperty) {
+                System.out.println(property);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No commercial properties available.");
         }
     }
 }

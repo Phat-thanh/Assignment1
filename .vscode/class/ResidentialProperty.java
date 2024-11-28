@@ -21,6 +21,6 @@ public class ResidentialProperty extends Property {
 
     @Override
     public String toString() {
-        return super.toString() + ", Bedrooms=" + bedrooms + ", Allows Pets=" + allowsPets;
+        return super.toString() + ", Bedrooms=" + bedrooms + ", Allows Pets=" + allowsPets+"]";
     }
 }
