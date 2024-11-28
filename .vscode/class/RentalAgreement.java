@@ -1,7 +1,7 @@
 import java.util.Date;
 
 /**
- * Represents a rental agreement.
+ * @author <Nguyen Thanh Phat - s40564656>
  */
 public class RentalAgreement {
     private String agreementId;
