@@ -1,6 +1,6 @@
-P1,D1 St,999.0,Available
-P2,12 NGUYEN HUE St,1290.0,Rented
-P3,789 HUNG VUONG St,2999.0,Under Maintenance
-P4,101 TRAN HUNG DAO St,1299.0,Available
-P5,202 CMT8 St,999.0,Available
-P6,303 LE VAN LUONG St,4999.0,Rented
+P1,D1 St,999.0,Available,Residential,3:true
+P2,12 NGUYEN HUE St,1290.0,Rented,Commercial,Restaurant:20
+P3,789 HUNG VUONG St,2999.0,Under Maintenance,Residential,2:false
+P4,101 TRAN HUNG DAO St,1299.0,Available,Commercial,Office:10
+P5,202 CMT8 St,999.0,Available,Residential,4:true
+P6,303 LE VAN LUONG St,4999.0,Rented,Commercial,Warehouse:15
