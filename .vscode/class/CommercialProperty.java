@@ -1,5 +1,5 @@
 /**
- * Represents a commercial property.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class CommercialProperty extends Property {
     private String businessType;

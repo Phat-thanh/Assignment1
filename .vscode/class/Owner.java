@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Date;
 
 /**
- * Represents a property owner.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Owner extends Person {
     private List<Property> ownedProperties;

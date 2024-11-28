@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Main application for the Rental Management System.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Main {
     private static RentalManager rentalManager = new RentalManagerImpl();

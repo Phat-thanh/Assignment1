@@ -1,5 +1,5 @@
 /**
- * Represents a residential property.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class ResidentialProperty extends Property {
     private int bedrooms;

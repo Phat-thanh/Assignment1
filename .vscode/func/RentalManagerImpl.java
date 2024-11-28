@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
- * Implementation of the RentalManager interface.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class RentalManagerImpl implements RentalManager {
     private List<RentalAgreement> rentals;
@@ -143,7 +143,7 @@ public class RentalManagerImpl implements RentalManager {
                     Double.parseDouble(parts[4]), // Rent Amount
                     parts[5], // Rental Period
                     parts[6], // Status
-                    dateFormat.parse(parts[7]) // Chuyển chuỗi ngày thành Date
+                    dateFormat.parse(parts[7]) // Change String Date to Date
                 ));
             }
         } catch (IOException e) {
@@ -183,7 +183,7 @@ private void loadTenants() {
             tenants.add(new Tenant(
                 parts[0], // Tenant ID
                 parts[1], // Full Name
-                dateFormat.parse(parts[2]), // Chuyển chuỗi ngày thành Date
+                dateFormat.parse(parts[2]), // Change String Date to Date
                 parts[3]  // Contact Info
             ));
         }
@@ -219,7 +219,7 @@ private void loadTenants() {
                 hosts.add(new Host(
                     parts[0], // Host ID
                     parts[1], // Full Name
-                    dateFormat.parse(parts[2]), // Chuyển chuỗi ngày thành Date
+                    dateFormat.parse(parts[2]), // Change String Date to Date
                     parts[3]  // Contact Info
                 ));
             }

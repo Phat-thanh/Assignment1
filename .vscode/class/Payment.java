@@ -1,7 +1,7 @@
 import java.util.Date;
 
 /**
- * Represents a payment transaction.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Payment {
     private String paymentId;

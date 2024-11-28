@@ -1,7 +1,7 @@
 import java.util.Date;
 
 /**
- * Represents a person with shared attributes.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Person {
     private String id;

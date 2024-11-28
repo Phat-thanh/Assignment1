@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Handles CSV file input/output for the system.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class CSVHandler {
     /**
@@ -21,9 +21,7 @@ public class CSVHandler {
         return rows;
     }
 
-    /**
-     * Write data to a CSV file.
-     */
+
     public static void writeCSV(String filePath, List<String[]> data) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             for (String[] row : data) {

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 /**
- * Represents a tenant.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Tenant extends Person {
     private List<RentalAgreement> rentalAgreements;

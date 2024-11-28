@@ -1,5 +1,5 @@
 /**
- * Base class for properties.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Property {
     private String propertyId;

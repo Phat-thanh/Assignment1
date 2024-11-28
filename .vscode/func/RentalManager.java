@@ -1,7 +1,7 @@
 import java.util.List;
 
 /**
- * Interface defining rental management operations.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public interface RentalManager {
 

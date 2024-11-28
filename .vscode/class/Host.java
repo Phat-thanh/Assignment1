@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Date;
 
 /**
- * Represents a host who manages properties.
+ *@author <Nguyen Thanh Phat> <s4054656>
  */
 public class Host extends Person {
     private List<Property> managedProperties;
